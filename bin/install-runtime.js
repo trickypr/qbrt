@@ -219,9 +219,7 @@ function installRuntime(platform=process.platform) {
     const targetDir = path.join(resourcesDir, 'qbrt', 'defaults', 'preferences');
 
     const prefFiles = [
-      'debugger.js',
-      'devtools-client.js',
-      'devtools-startup.js',
+      'debugger.js'
     ];
 
     return Promise.all(prefFiles.map(file => pify(fs.copy)(path.join(sourceDir, file), path.join(targetDir, file))));
